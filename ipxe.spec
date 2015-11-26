@@ -1,7 +1,7 @@
 Name:           ipxe
 Version:        1.0.0_f3c2da7
 Release:        1
-License:        GPL-2.0
+License:        GPL-2.0 UBDL
 Summary:        Open source network boot firmware
 Url:            http://ipxe.org/
 Group:          kernel
@@ -46,4 +46,5 @@ cp src/bin-x86_64-efi/ipxe.efi %{buildroot}/usr/share/ipxe/ipxe-x86_64.efi
 /usr/share/ipxe/undionly.kpxe 
 /usr/share/ipxe/ipxe-i386.efi
 /usr/share/ipxe/ipxe-x86_64.efi
+%doc COPYING COPYING.GPLv2 COPYING.UBDL
 
