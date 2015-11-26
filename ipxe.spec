@@ -1,0 +1,49 @@
+Name:           ipxe
+Version:        1.0.0_f3c2da7
+Release:        1
+License:        GPL-2.0
+Summary:        Open source network boot firmware
+Url:            http://ipxe.org/
+Group:          kernel
+Source0:        https://git.ipxe.org/ipxe.git/snapshot/f3c2da7d4a0e7cf3ab3e9cc3c49517aedb9cf4cc.tar.bz2
+
+BuildRequires:  binutils-dev
+BuildRequires:  xz-dev
+BuildRequires:  zlib-dev
+BuildRequires:  perl
+
+
+%description
+iPXE is the leading open source network boot firmware.
+It provides a full PXE implementation enhanced with
+additional features.
+
+You can use iPXE to replace the existing PXE ROM on
+your network card, or you can chainload into iPXE to
+obtain the features of iPXE without the hassle of
+reflashing. 
+
+%prep
+%setup -q -n ipxe-f3c2da7
+
+%build
+
+make -C src bin/undionly.kpxe
+make -C src bin-i386-efi/ipxe.efi
+make -C src bin-x86_64-efi/ipxe.efi
+
+
+%install
+
+mkdir -p %{buildroot}/usr/share/ipxe
+cp src/bin/undionly.kpxe       %{buildroot}/usr/share/ipxe/undionly.kpxe 
+cp src/bin-i386-efi/ipxe.efi   %{buildroot}/usr/share/ipxe/ipxe-i386.efi
+cp src/bin-x86_64-efi/ipxe.efi %{buildroot}/usr/share/ipxe/ipxe-x86_64.efi
+
+%files
+%defattr(-,root,root)
+%dir /usr/share/ipxe
+/usr/share/ipxe/undionly.kpxe 
+/usr/share/ipxe/ipxe-i386.efi
+/usr/share/ipxe/ipxe-x86_64.efi
+
