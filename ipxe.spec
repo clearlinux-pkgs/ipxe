@@ -28,9 +28,9 @@ reflashing.
 
 %build
 
-make -C src bin/undionly.kpxe
-make -C src bin-i386-efi/ipxe.efi
-make -C src bin-x86_64-efi/ipxe.efi
+make -C src NO_WERROR=1 bin/undionly.kpxe
+make -C src NO_WERROR=1 bin-i386-efi/ipxe.efi
+make -C src NO_WERROR=1 bin-x86_64-efi/ipxe.efi
 
 
 %install
