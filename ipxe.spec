@@ -43,7 +43,7 @@ cp src/bin-x86_64-efi/ipxe.efi %{buildroot}/usr/share/ipxe/ipxe-x86_64.efi
 %files
 %defattr(-,root,root)
 %dir /usr/share/ipxe
-/usr/share/ipxe/undionly.kpxe 
+/usr/share/ipxe/undionly.kpxe
 /usr/share/ipxe/ipxe-i386.efi
 /usr/share/ipxe/ipxe-x86_64.efi
 %doc COPYING COPYING.GPLv2 COPYING.UBDL
