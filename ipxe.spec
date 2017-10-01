@@ -5,7 +5,7 @@ License:        GPL-2.0
 Summary:        Open source network boot firmware
 Url:            http://ipxe.org/
 Group:          kernel
-Source0:        https://git.ipxe.org/ipxe.git/snapshot/f3c2da7d4a0e7cf3ab3e9cc3c49517aedb9cf4cc.tar.bz2
+Source0:        https://git.ipxe.org/ipxe.git/snapshot/1b67a0564657b6fcef18b1588ea6491ca1b1996d.tar.bz2
 
 BuildRequires:  binutils-dev
 BuildRequires:  xz-dev
@@ -24,7 +24,7 @@ obtain the features of iPXE without the hassle of
 reflashing. 
 
 %prep
-%setup -q -n ipxe-f3c2da7
+%setup -q -n ipxe-1b67a05
 
 %build
 
