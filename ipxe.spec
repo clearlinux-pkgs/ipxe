@@ -1,6 +1,6 @@
 Name:           ipxe
 Version:        1.0.0_f3c2da7
-Release:        6
+Release:        7
 License:        GPL-2.0
 Summary:        Open source network boot firmware
 Url:            http://ipxe.org/
