@@ -1,6 +1,6 @@
 Name:           ipxe
 Version:        1.0.0_f3c2da7
-Release:        10
+Release:        11
 License:        GPL-2.0
 Summary:        Open source network boot firmware
 Url:            http://ipxe.org/
@@ -11,6 +11,7 @@ BuildRequires:  binutils-dev
 BuildRequires:  xz-dev
 BuildRequires:  zlib-dev
 BuildRequires:  perl
+Patch1:         5dce2d454b2829431e0484ac0f993b7a2759e0df.patch
 
 
 %description
@@ -25,6 +26,7 @@ reflashing.
 
 %prep
 %setup -q -n ipxe-1b67a05
+%patch1 -p1
 
 %build
 
